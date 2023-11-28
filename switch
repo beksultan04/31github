@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(LC_ALL, "ru");
+	int a;
+	cin >> a;
+	cout << "Введите число:" << a << endl;
+	switch (a)
+	{
+	case 1:
+		cout << "Вы ввели 1" << endl;
+		break;
+	case 2:
+		cout << "Вы ввели 2" << endl;
+		break;
+	case 3:
+		cout << "Вы ввели 3" << endl;
+		break;
+	case 4:
+		cout << "Вы ввели 4" << endl;
+		break;
+	case 5:
+		cout << "Вы ввели 5" << endl;
+		break;
+	case 6:
+		cout << "Вы ввели 6" << endl;
+		break;
+	case 7:
+		cout << "Вы ввели 7" << endl;
+		break;
+	case 8:
+		cout << "Вы ввели 8" << endl;
+		break;
+	case 9:
+		cout << "Вы ввели 9" << endl;
+		break;
+	case 10:
+		cout << "Вы ввели 10" << endl;
+		break;
+	default:
+		cout << "Я не знаю этого числа!" << endl;
+		break;
+	}
+}
