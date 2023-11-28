@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	const int x = 5;
+	int a[5] = { 10, 0, -9, -12 };
+	cout << a[1];
+	x = 6;
+	if (x == 6)
+		cout << "*";
+	else
+		cout << "**";
+	return 0;
+}
