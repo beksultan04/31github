@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int J, N, M, S;
+	M = 8;
+	N = 4;
+	while (N <= M)
+	{
+		S = 1;
+		J = 2;
+		while (J <= N / 2)
+		{
+			if (N % J == 0) S = S + J;
+			J = J + 1;
+		}
+		if (N == S)
+			cout << N << "";
+		N = N + 2;
+	}
+}
