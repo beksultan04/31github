@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+    srand(time(0));
+
+    int n;
+    do {
+        std::cout << "Введите размер массива (от 50 до 200): ";
+        std::cin >> n;
+    } while (n < 50 || n > 200);
+
+    std::vector<int> array(n);
+    for (auto& element : array) {
+        element = rand() % 201 - 100;
+    }
+
+    std::vector<int> new_array(n);
+    new_array[0] = array[0];
+    new_array[n - 1] = array[n - 1];
+
+    for (int i = 1; i < n - 1; ++i) {
+        new_array[i] = (array[i - 1] + array[i + 1]) / 2;
+    }
+
+    for (const auto& element : new_array) {
+        std::cout << element << ' ';
+    }
+
+    return 0;
+}
