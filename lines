@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	char string[] = { 'H', 'e', 'l', 'l', 'o' };
+	cout << strlen(string) << endl;
+}
