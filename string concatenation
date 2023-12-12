@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void main()
+{
+	setlocale(LC_ALL, "ru");
+	string str1 = "Мартин";
+	string str2 = "Игоревич";
+	string str3 = "Дугин";
+	string result;
+	result = "Фамилия" + str3 + "\tИмя" + str1 + "\tОтчество" + str2;
+	cout << result << endl;
+}
