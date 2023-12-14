@@ -1,0 +1,7 @@
+#include <iostream>
+#define FOO(x, y) ((x) - (y))
+using namespace std;
+void main()
+{
+	cout << FOO(5, 6) << endl;
+}
