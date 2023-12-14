@@ -1,0 +1,13 @@
+#include <iostream>
+#define PI 3.14
+#define tab "\t"
+#define begin {
+#define end }
+using namespace std;
+void main()
+{
+	for (int i = 0; i < 5; i++)
+		begin
+		cout << i << endl;
+	end
+}
