@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void main()
+{
+	setlocale(LC_ALL, "ru");
+	int a;
+	cin >> a;
+	if (a < 10)
+	{
+		cout << "a меньше 10" << endl;
+	}
+	else if (a > 10)
+	{
+		cout << "a больше 10" << endl;
+	}
+	else
+	{
+		cout << "a равна 10" << endl;
+	}
+}
