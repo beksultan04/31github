@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+namespace firstNS
+{
+	void Foo()
+	{
+		cout << "Foo firstNS" << endl;
+	}
+	int a;
+	class Point
+	{
+	};
+}
+namespace secondNS
+{
+	void Foo()
+	{
+		cout << "Foo secondNS" << endl;
+	}
+}
+namespace thirdNS
+{
+	namespace secondNS
+	{
+		void Foo()
+		{
+			cout << "Foo thirdNS" << endl;
+		}
+	}
+}
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	firstNS::Foo();
+	return 0;
+}
