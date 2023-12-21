@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int fun(int, int);
+int main()
+{
+	int (*ptrnod) (int, int);
+	ptrnod = fun;
+	int a, b;
+	a = 16;
+	b = 20;
+	cout << "fun = " << ptrnod(a, b) << endl;
+	return 0;
+}
+int fun(int number1, int number2)
+{
+	if (number2 == 0)
+		return number1;
+	return fun(number2, number1 % number2);
+}
