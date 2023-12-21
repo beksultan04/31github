@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	std::vector<int> myVector = { 11,46,9 };
+	std::vector<int>::iterator it = myVector.begin();
+	auto it2 = myVector.begin();
+	for (auto it = myVector.begin(); it != myVector.end(); it++)
+	{
+		std::cout << *it << std::endl;
+		return 0;
+	}
+}
