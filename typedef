@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+typedef std::vector<int> int_vector;
+typedef std::vector<float> float_vector;
+
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	std::vector<int> myVector;
+	int_vector myVectpr2;
+	std::vector<float> vvvcdad;
+	float_vector myVector3;
+	return 0;
+}
