@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+bool GreaterThanZero(int a)
+{
+	return a > 0;
+}
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	cout << GreaterThanZero(1) << endl;
+	return 0;
+}
