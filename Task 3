@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x = 1, y = 1, z = 0;
+	x = y = 1; z = x++ - 1;
+	cout << x << "";
+	z += -x++ + ++y;
+	cout << x << "" << z << "";
+	z = x / ++x;
+	cout << x << "" << z << "";
+	return 0;
+}
