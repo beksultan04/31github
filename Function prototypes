@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+void foo(int a, int b);
+
+void foo(int a, int b)
+{
+	cout << "Я функция, меня вызвали!" << endl;
+}
+
+void main()
+{
+	setlocale(LC_ALL, "ru");
+	foo(5, 6);
+}
