@@ -1,0 +1,91 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+double postfix()
+{
+    static const unsigned STACK_SIZE = 1024;
+    double operand[STACK_SIZE]; 
+    unsigned operand_top = 0; 
+
+    while (true)
+    {
+        char op;
+        if (cin >> op)
+        {
+            double z;
+            if (strchr("+-*/", op))
+            {
+                if (operand_top < 2)
+                {
+                    cerr << "stack underflow: at least 2 items are needed\n";
+                    break;
+                }
+
+                const double
+                    x = operand[operand_top - 2],
+                    y = operand[operand_top - 1];
+                operand_top -= 2;
+
+                switch (op)
+                {
+                case '+': z = x + y; break;
+                case '-': z = x - y; break;
+                case '*': z = x * y; break;
+                case '/': z = x / y; break;
+                }
+
+                operand[operand_top++] = z;
+
+                if (operand_top == STACK_SIZE)
+                {
+                    cerr << "stack overflow\n";
+                    break;
+                }
+            }
+            else 
+            {
+                cin.unget();
+                if (cin >> z)
+                {
+                    operand[operand_top++] = z;
+
+                    if (operand_top == STACK_SIZE)
+                    {
+                        cerr << "stack overflow\n";
+                        break;
+                    }
+                }
+                else 
+                    break;
+            }
+        }
+        else 
+            break;
+    }
+
+    
+    if (operand_top == 0) 
+    {
+        cerr << "stack underflow: at least 1 item is needed\n";
+        return 0.;
+    }
+
+    return operand[operand_top - 1];
+}
+
+
+int main()
+{
+    while (true)
+    {
+        double answer = postfix();
+        
+        cin.clear();
+        cin.ignore(cin.rdbuf()->in_avail());
+        cin.sync();
+        
+        cout << "answer = " << answer << endl;
+    }
+    return EXIT_SUCCESS;
+}
